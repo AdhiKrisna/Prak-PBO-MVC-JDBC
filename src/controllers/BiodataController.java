@@ -31,16 +31,16 @@ public class BiodataController {
     }
 
     //ini bisa copy dari connector lama
-    public void updateData(BiodataModel data) {
+    public void updateData(BiodataModel biodata) {
         try {
             String query = "UPDATE biodata SET nama=?, umur=?, agama=?, gender=?, skills=? WHERE id=?";
             preparedStatement = connector.conn.prepareStatement(query);
-            preparedStatement.setString(1, data.getNama());
-            preparedStatement.setInt(2, data.getUmur());
-            preparedStatement.setString(3, data.getAgama());
-            preparedStatement.setString(4, data.getGender());
-            preparedStatement.setString(5, data.getSkills());
-            preparedStatement.setInt(6, data.getId());
+            preparedStatement.setString(1, biodata.getNama());
+            preparedStatement.setInt(2, biodata.getUmur());
+            preparedStatement.setString(3, biodata.getAgama());
+            preparedStatement.setString(4, biodata.getGender());
+            preparedStatement.setString(5, biodata.getSkills());
+            preparedStatement.setInt(6, biodata.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

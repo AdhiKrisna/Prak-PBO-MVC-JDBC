@@ -10,7 +10,7 @@ public class BiodataModel {
     private String gender;
     private String skills;
    
-    // untuk constructor yang ada id
+    // untuk constructor yang ada id (read, edit)
     public BiodataModel(int id, String nama2, int umur2, String agama, String gender, String skills) {
         this.id = id;
         this.nama = nama2;
@@ -19,6 +19,7 @@ public class BiodataModel {
         this.gender = gender;
         this.skills = skills;
     }
+    // untuk constructor yang tidak ada id (input)
     public BiodataModel(String nama, int umur, String agama, String gender, String skills) {
             this.nama = nama;
             this.umur = umur;
